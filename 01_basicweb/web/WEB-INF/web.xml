@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>01_basicweb</display-name>
+	
+	
+	<!--  
+	  	서블릿 등록하기
+	  	<servlet>태그를 이용함. -> 내가 생성한 서블릿 클래스를 등록
+	  	servlet의 이름설정 -> <servlet-name>명칭</servlet-name>
+	  	servlet클래스설정 -> <servlet-class>패키지명.클래스명칭</servlet-class>
+	-->  
+	<servlet>
+		<servlet-name>first</servlet-name>
+		<servlet-class>com.first.controller.FirstServlet</servlet-class>
+	</servlet>	
+		
+
+	<!--
+		등록된 서블릿을 url주소와 연결하기
+		<servlet-mapping>태그이용
+		설정된 서블릿 이름중 하나를 작성<servlet-name>
+		url주소값을 작성 localhost:9090/01_basicweb/
+		<url-pattern>태그이용 주소작성시 /로 시작
+	-->
+	
+	<servlet-mapping>
+		<servlet-name>first</servlet-name>
+		<url-pattern>/first.do</url-pattern>
+	</servlet-mapping>
+	
+	
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

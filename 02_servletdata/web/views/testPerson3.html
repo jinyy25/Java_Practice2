@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>페이지 전환테스트!</title>
+</head>
+<body>
+    <p>	
+    	당신의 취향 테스트 <br>
+    	데이터입력 후 확인 버튼을 누르세요
+    </p>
+    <!-- 주소값에 /를 넣지 않으면 상대경로로 주소값을 가져옴
+    	  서버에서 부터 경로가 시작 -->
+    <form action="/02_servletdata/sendMovePage.do" method="post">
+        <ul style="list-style-type: none; line-height: 200%;">
+            <li>
+				이름 <input type="text" name="name">
+            </li>
+            <li>
+				나이 <input type="number" name="age"><br>
+				키 <input type="number" name="height"><br>
+            </li>
+            <li>
+            	좋아하는색
+                <input type="radio" name="color" value="red" id="r">
+                <label for="r">빨강</label>
+                <input type="radio" name="color" value="orange" id="o">
+                <label for="o">주황</label>
+                <input type="radio" name="color" value="yellow" id="y">
+                <label for="y">노랑</label>
+                <input type="radio" name="color" value="green" id="g">
+                <label for="g">초록</label>
+            </li>
+            <li>
+      		          좋아하는 음식
+                <input type="checkbox" name="food" value="떡볶이" id="dd">
+                <label for="dd">떡볶이</label>
+                <input type="checkbox" name="food" value="순대" id="ss">
+                <label for="ss">순대</label>
+                <input type="checkbox" name="food" value="치킨" id="ch">
+                <label for="ch">치킨</label>
+                <input type="checkbox" name="food" value="짬뽕" id="jj">
+                <label for="">짬뽕</label>
+                <input type="checkbox" name="food" value="소고기" id="so">
+                <label for="so">소고기</label>
+                <input type="checkbox" name="food" value="피스타" id="pa">
+                <label for="pa">파스타</label>
+                <input type="checkbox" name="food" value="랍스타" id="rap">
+                <label for="rap">랍스타</label>
+                <input type="checkbox" name="food" value="킹크랩" id="ki">
+                <label for="ki">킹크랩</label>
+                <input type="checkbox" name="food" value="연어" id="yy">
+                <label for="yy">연어</label>
+                <input type="checkbox" name="food" value="바베큐" id="bbq">
+                <label for="bbq">바베큐</label>
+            </li>
+            <li>
+				좋아하는 동물
+                <select name="animal" id="ani">
+                    <option value="고래">고래</option>
+                    <option value="라이언">라이언</option>
+                    <option value="라쿤">라쿤</option>
+                    <option value="수호랑">수호랑</option>
+                    <option value="기린">기린</option>
+                </select>
+            </li>
+            <li>
+                <input type="submit" value="제출">
+                <input type="reset" value="수정">
+            </li>
+        </ul>
+        </form>
+</body>
+</html>
